@@ -1,5 +1,12 @@
-# track_laser_pointer
+# Laser Pointer Tracker
 A program to detect the foreground target (laser spot) using histogram analysis and frame differencing, and lock on target by overlaying a crosshair marker on the center of the detected spot.
+
+# Example: Object tracking
+## Input video
+![in_video](https://user-images.githubusercontent.com/72912013/166824029-c55682cf-c3b3-4867-b45d-2a31b5ad81e8.gif)
+
+## Output video
+![out_video](https://user-images.githubusercontent.com/72912013/166824084-aa939ffd-05d8-4425-add1-b6d18dfb9163.gif)
 
 # build and run
 1. To perform the histogram analysis and set an appropriate thresholds, run `image_intensity_histogram.py` using Google colab for conveience (or use python 3 and required python modules locally). Change line #12 to specify the path of the of the frame to be inspected.
@@ -50,14 +57,6 @@ From the analysis shown above, setting our thresholding function as follows seem
 And for our histogram, this would look like the shaded red region as shown below:
 
 ![histogram_region_of_interest](https://user-images.githubusercontent.com/72912013/166823706-36bcb08b-bd1a-4fd6-83f6-dbeb74961166.png)
-
-
-# Example: Object tracking
-## Input video
-![in_video](https://user-images.githubusercontent.com/72912013/166824029-c55682cf-c3b3-4867-b45d-2a31b5ad81e8.gif)
-
-## Output video
-![out_video](https://user-images.githubusercontent.com/72912013/166824084-aa939ffd-05d8-4425-add1-b6d18dfb9163.gif)
 
 # Future work
 1. Match frame rate 100% in real-time.
